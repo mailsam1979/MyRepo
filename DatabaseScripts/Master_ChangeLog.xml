@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.0.xsd
+        http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd">
+
+ <!--    <preConditions>
+        <runningAs username="postgres"/>
+    </preConditions>
+-->
+	<changeSet author="Sukanta_Liquibase" id="1">
+    <sqlFile dbms="postgresql"
+            encoding="utf8"
+            endDelimiter="\nGO"
+            path="DatabaseScripts/Release_1.1/DDL_Scripts/ddl_create_tab_emp.sql"
+            relativeToChangelogFile="true"
+            splitStatements="true"
+            stripComments="true"/>    			
+    <rollback>
+    <sqlFile dbms="postgresql"
+            encoding="utf8"
+            endDelimiter="\nGO"
+            path="DatabaseScripts/Release_1.1/DDL_Scripts/ddl_drop_tab_emp.sql"
+            relativeToChangelogFile="true"
+            splitStatements="true"
+            stripComments="true"/>    
+    </rollback>
+    </changeSet>
+	
+	<changeSet author="Sukanta_Liquibase" id="2">
+    <sqlFile dbms="postgresql"
+            encoding="utf8"
+            endDelimiter="\nGO"
+            path="DatabaseScripts/Release_1.1/DML_Scripts/dml_insert_emp.sql"
+            relativeToChangelogFile="true"
+            splitStatements="true"
+            stripComments="true"/>
+    <rollback>
+    <sqlFile dbms="postgresql"
+            encoding="utf8"
+            endDelimiter="\nGO"
+            path="DatabaseScripts/Release_1.1/DML_Scripts/dml_insert_roleback_emp.sql"
+            relativeToChangelogFile="true"
+            splitStatements="true"
+            stripComments="true"/>		
+    </rollback>
+    </changeSet>
+	
+		<changeSet author="Sukanta_Liquibase" id="3">
+    <sqlFile dbms="postgresql"
+            encoding="utf8"
+            endDelimiter="\nGO"
+            path="DatabaseScripts/Release_1.2/DDL_Scripts/ddl_create_tab_emp_2.sql"
+            relativeToChangelogFile="true"
+            splitStatements="true"
+            stripComments="true"/>
+    <rollback>
+    <sqlFile dbms="postgresql"
+            encoding="utf8"
+            endDelimiter="\nGO"
+            path="DatabaseScripts/Release_1.2/DDL_Scripts/ddl_drop_tab_emp_2.sql"
+            relativeToChangelogFile="true"
+            splitStatements="true"
+            stripComments="true"/>		
+    </rollback>
+	</changeSet>
+	
+	<changeSet author="Sukanta_Liquibase" id="4">
+	<sqlFile dbms="postgresql"
+            encoding="utf8"
+            endDelimiter="\nGO"
+            path="DatabaseScripts/Release_1.2/DML_Scripts/dml_insert_emp_2.sql"
+            relativeToChangelogFile="true"
+            splitStatements="true"
+            stripComments="true"/>
+    <rollback>
+    <sqlFile dbms="postgresql"
+            encoding="utf8"
+            endDelimiter="\nGO"
+            path="DatabaseScripts/Release_1.2/DML_Scripts/dml_insert_roleback_emp_2.sql"
+            relativeToChangelogFile="true"
+            splitStatements="true"
+            stripComments="true"/>		
+    </rollback>
+    </changeSet>
+	
+</databaseChangeLog>
