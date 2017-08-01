@@ -80,7 +80,7 @@
     <sqlFile dbms="postgresql"
             encoding="utf8"
             endDelimiter="\nGO"
-            path="DatabaseScripts/Release_1.2/DML_Scripts/dml_insert_roleback_emp_2.sql"
+            path="DatabaseScripts/Release_1.2/DML_Scripts/ml_insert_roleback_emp_2.sql"
             relativeToChangelogFile="true"
             splitStatements="true"
             stripComments="true"/>		
