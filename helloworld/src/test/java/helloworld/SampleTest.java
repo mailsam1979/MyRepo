@@ -15,7 +15,7 @@ public class SampleTest {
 		assertTrue(a + b == 3);
 		
 	}
-	## added bt devbranch
+
 	
 	@Test
 	public void test() {
@@ -27,7 +27,7 @@ public class SampleTest {
 		
 	}
 	
-	# added by testb
+
 	@Test
 	public void test() {
 		
